@@ -18,10 +18,6 @@ La interfaz usa una identidad visual cozy y romántica:
 
 ## Publicación
 
-Sitio publicado con GitHub Pages:
-
-https://lchicaa04-hue.github.io/pagina-web/
-
 Repositorio del proyecto fuente:
 
 https://github.com/lchicaa04-hue/Proyecto
