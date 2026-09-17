@@ -1,20 +1,541 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Ecos del Abismo | Cortometraje animado 3D">
-<title>Ecos del Abismo | Cortometraje Animado</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{--primary:#0A2240;--yellow:#F4D03F;--bg:#050E1A;--card:#102A45;--light:#F0F4F8;--muted:#9FB3C8}*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--light);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}header.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,rgba(5,14,26,.9),rgba(10,34,64,.8)),url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80') center/cover fixed}h1,h2,h3,h4{font-family:Cinzel,serif}header.hero h1{font-size:clamp(3rem,8vw,4.5rem);color:var(--yellow);margin:0 0 15px;text-shadow:0 0 20px rgba(244,208,63,.3)}header.hero p{font-size:1.25rem;color:var(--muted);max-width:600px;margin:0 0 30px}.cta-buttons{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}.btn{padding:12px 30px;border-radius:15px;font-weight:600;text-decoration:none;transition:.3s;display:inline-block}.btn-primary{background:var(--yellow);color:var(--bg);box-shadow:0 5px 15px rgba(244,208,63,.2)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(244,208,63,.4)}.btn-secondary{background:transparent;color:var(--light);border:1px solid var(--yellow)}.btn-secondary:hover{background:rgba(244,208,63,.1);transform:translateY(-3px)}section{padding:100px 10%}h2.section-title{font-size:2.5rem;color:var(--yellow);text-align:center;margin:0 0 50px;position:relative}h2.section-title:after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:var(--yellow);border-radius:2px}.synopsis-text{max-width:800px;margin:0 auto 40px;color:var(--muted);font-size:1.1rem;line-height:1.8;text-align:center}.grid-4,.gallery-grid,.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}.card,.gallery-item,.team-card{background:var(--card);border:1px solid rgba(244,208,63,.2);border-radius:20px;transition:.3s}.card{padding:30px}.card:hover,.gallery-item:hover,.team-card:hover{transform:translateY(-5px);border-color:var(--yellow);box-shadow:0 10px 25px rgba(244,208,63,.15)}.card h3,.gallery-info h4{color:var(--yellow);margin-top:0}.card p,.gallery-info p{color:var(--muted);line-height:1.5}.timeline{max-width:800px;margin:auto;padding-left:30px;border-left:2px solid rgba(244,208,63,.3)}.timeline-item{position:relative;margin-bottom:40px}.timeline-item:before{content:'';position:absolute;left:-36px;top:5px;width:12px;height:12px;background:var(--yellow);border-radius:50%;box-shadow:0 0 10px var(--yellow)}.timeline-item h4{color:var(--yellow);margin:0 0 8px}.timeline-item p{color:var(--muted);margin:0}.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.gallery-item{overflow:hidden}.gallery-placeholder{height:200px;background:linear-gradient(135deg,var(--primary),var(--card));display:flex;align-items:center;justify-content:center;color:var(--yellow);font-family:Cinzel,serif;border-bottom:1px solid rgba(244,208,63,.1)}.gallery-info{padding:20px}.gallery-info h4{margin:0 0 8px}.team-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.team-card{text-align:center;padding:25px}.team-card h4{margin:0 0 5px}.team-card p{color:var(--yellow);font-weight:600}.support-section{text-align:center;background:linear-gradient(180deg,var(--bg),var(--card));border:1px solid rgba(244,208,63,.2);border-radius:30px;margin:0 10%;padding:50px}.support-section p{max-width:700px;margin:0 auto 30px;color:var(--muted);font-size:1.1rem;line-height:1.6}.progress-bar-container{max-width:500px;margin:30px auto 0;background:var(--bg);border-radius:10px;height:10px;overflow:hidden;border:1px solid rgba(244,208,63,.2)}.progress-fill{width:100%;height:100%;background:var(--yellow);box-shadow:0 0 10px var(--yellow)}footer{background:#03070D;padding:80px 10% 40px;border-top:1px solid rgba(244,208,63,.1)}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin-bottom:50px}.footer-grid h3{color:var(--yellow)}.contact-form input,.contact-form textarea{width:100%;padding:12px 20px;margin-bottom:15px;background:var(--card);border:1px solid rgba(244,208,63,.2);border-radius:15px;color:var(--light);font:inherit}.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--yellow)}.social-links{display:flex;gap:10px;flex-wrap:wrap}.social-links a{color:var(--yellow);text-decoration:none;border:1px solid rgba(244,208,63,.3);padding:8px 15px;border-radius:10px}.social-links a:hover{background:var(--yellow);color:var(--bg)}.footer-bottom{text-align:center;border-top:1px solid rgba(244,208,63,.1);padding-top:30px;color:var(--muted);font-size:.9rem}.footer-bottom p{margin:0 0 15px}@media(max-width:600px){section{padding:70px 6%}.support-section{margin:0;padding:35px 20px}.cta-buttons{gap:12px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos del Abismo | Portafolio Académico SENA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sena-blue: #00324D;
+            --sena-yellow: #39A900;
+            --primary-blue: #00324D;
+            --accent-yellow: #FFB703;
+            --bg-light: #F4F7FA;
+            --card-bg: #FFFFFF;
+            --text-main: #1D2D35;
+            --text-muted: #576574;
+            --border-color: #D1D8E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .institutional-bar {
+            background-color: var(--primary-blue);
+            color: var(--accent-yellow);
+            padding: 8px 10%;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-yellow);
+        }
+
+        header.hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(135deg, rgba(0,50,77,0.92), rgba(0,32,49,0.85)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: #FFFFFF;
+        }
+
+        header.hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--accent-yellow);
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        header.hero p {
+            font-size: 1.2rem;
+            color: #E2E8F0;
+            max-width: 650px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background-color: #ffa400;
+            box-shadow: 0 6px 12px rgba(255, 183, 3, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 2px solid var(--accent-yellow);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 183, 3, 0.1);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 90px 10%;
+        }
+
+        h2.section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 45px;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-yellow);
+            border-radius: 2px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-yellow);
+            box-shadow: 0 8px 25px rgba(0, 50, 77, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .synopsis-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--accent-yellow);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 35px;
+            border-left: 3px solid var(--primary-blue);
+        }
+
+        .timeline-item {
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -41px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            background-color: var(--accent-yellow);
+            border: 3px solid var(--primary-blue);
+            border-radius: 50%;
+        }
+
+        .timeline-item h4 {
+            color: var(--primary-blue);
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .timeline-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 50, 77, 0.1);
+            border-color: var(--accent-yellow);
+        }
+
+        .gallery-placeholder {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary-blue), #103c5c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-yellow);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h4 {
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .team-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 50, 77, 0.08);
+        }
+
+        .team-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .team-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            background-color: #EBF2F7;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
+        .support-section {
+            background: #FFFFFF;
+            text-align: center;
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+            margin: 0 10%;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .support-section p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .progress-bar-container {
+            max-width: 500px;
+            margin: 25px auto 0;
+            background-color: #E2E8F0;
+            border-radius: 8px;
+            height: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .progress-fill {
+            width: 100%;
+            height: 100%;
+            background-color: var(--accent-yellow);
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: #FFFFFF;
+            padding: 70px 10% 30px;
+            border-top: 5px solid var(--accent-yellow);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-grid h3 {
+            color: var(--accent-yellow);
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 18px;
+            margin-bottom: 15px;
+            background-color: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #A0AEC0;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-yellow);
+            background-color: rgba(255,255,255,0.12);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--primary-blue);
+            background-color: var(--accent-yellow);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.85;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            color: #CBD5E0;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .institutional-bar {
+                padding: 8px 6%;
+                gap: 8px;
+                font-size: 0.75rem;
+            }
+
+            header.hero {
+                height: 85vh;
+            }
+
+            header.hero h1 {
+                font-size: 2.8rem;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            h2.section-title {
+                font-size: 1.8rem;
+            }
+
+            .support-section {
+                margin: 0;
+                padding: 40px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="hero" id="inicio"><h1>Ecos del Abismo</h1><p>Un viaje visual a través de las profundidades del mar y la memoria</p><div class="cta-buttons"><a href="#demo" class="btn btn-primary">Ver Tráiler / Demo</a><a href="#contacto" class="btn btn-secondary">Escríbenos</a></div></header>
-<section id="concepto"><h2 class="section-title">Sobre el Proyecto</h2><p class="synopsis-text">En un mundo donde la luz solar no alcanza, un buceador solitario desciende a las profundidades oceánicas para recuperar los fragmentos de una civilización olvidada, enfrentándose no solo a la inmensidad del abismo, sino a los ecos de su propio pasado.</p><div class="grid-4"><article class="card"><h3>Género</h3><p>Cortometraje de Animación 3D, Drama & Misterio Submarino.</p></article><article class="card"><h3>Motor & Tech</h3><p>Blender 5.0 + Unreal Engine 5 (Lumen + Nanite para entornos abisales).</p></article><article class="card"><h3>Narrativa</h3><p>Atmósferas inmersivas, diseño sonoro profundo y storytelling visual sin diálogos.</p></article><article class="card"><h3>Estilo Visual</h3><p>Realismo estilizado, tonos azulados oscuros y destellos bioluminiscentes.</p></article></div></section>
-<section id="proceso"><h2 class="section-title">Proceso Creativo</h2><div class="timeline"><div class="timeline-item"><h4>ETAPA 1: Preproducción & Concept Art</h4><p>Definición del universo visual, investigación de bioluminiscencia marina y storyboards detallados.</p></div><div class="timeline-item"><h4>ETAPA 2: Modelado 3D & Esculpido</h4><p>Creación de la escenografía submarina, protagonista, criaturas abisales y props complejos.</p></div><div class="timeline-item"><h4>ETAPA 3: Texturizado PBR & Shading</h4><p>Materiales hiperrealistas en Substance Painter optimizados para motores en tiempo real.</p></div><div class="timeline-item"><h4>ETAPA 4: Rigging & Animación</h4><p>Animación corporal avanzada y simulación de elementos fluidos bajo el agua.</p></div><div class="timeline-item"><h4>ETAPA 5: Render & Postproducción</h4><p>Iluminación volumétrica, gradación de color y masterización de sonido envolvente.</p></div></div></section>
-<section id="galeria"><h2 class="section-title">Galería</h2><div class="gallery-grid" id="demo"><article class="gallery-item"><div class="gallery-placeholder">Turntable 3D</div><div class="gallery-info"><h4>Protagonista</h4><p>Modelo principal y traje de buceo de alta tecnología.</p></div></article><article class="gallery-item"><div class="gallery-placeholder">Criaturas Abisales</div><div class="gallery-info"><h4>Fauna Bioluminiscente</h4><p>Diseño conceptual de vida marina ficticia del abismo.</p></div></article><article class="gallery-item"><div class="gallery-placeholder">Escenario Principal</div><div class="gallery-info"><h4>Las Ruinas Sumergidas</h4><p>Iluminación y texturizado de templos submarinos.</p></div></article><article class="gallery-item"><div class="gallery-placeholder">UI / Storyboard</div><div class="gallery-info"><h4>Planificación de Planos</h4><p>Bocetos de la secuencia de descenso y descubrimiento.</p></div></article><article class="gallery-item"><div class="gallery-placeholder">Concept Art</div><div class="gallery-info"><h4>Paleta de Colores</h4><p>Contraste entre azul profundo y amarillo estelar.</p></div></article><article class="gallery-item"><div class="gallery-placeholder">Composición Final</div><div class="gallery-info"><h4>Capturas de Render</h4><p>Fotogramas destacados del cortometraje.</p></div></article></div></section>
-<section id="equipo"><h2 class="section-title">Equipo y Roles</h2><div class="team-grid"><article class="team-card"><h4>Laura Isabel Vargas Chaves</h4><p>Animación & Integración</p></article><article class="team-card"><h4>Doriam H.</h4><p>Dirección</p></article><article class="team-card"><h4>Enelia M.</h4><p>Modelado 3D</p></article><article class="team-card"><h4>Juliana C.</h4><p>Artista de Materiales</p></article><article class="team-card"><h4>Katherin R.</h4><p>Control de Calidad (QA)</p></article><article class="team-card"><h4>Miguel G.</h4><p>Documentación</p></article></div></section>
-<section><div class="support-section"><h2 class="section-title">Apoya / Participa</h2><p>Únete al viaje de producción de Ecos del Abismo. Ayúdanos a dar vida a esta historia sobre el autodescubrimiento y los misterios del océano.</p><div class="cta-buttons"><a href="https://notion.so" target="_blank" rel="noreferrer" class="btn btn-primary">Apóyanos en Notion</a><a href="https://discord.gg" target="_blank" rel="noreferrer" class="btn btn-secondary">Únete al Discord</a></div><div class="progress-bar-container"><div class="progress-fill"></div></div><p style="font-size:.85rem;margin-top:10px">Cronograma actual: 17 semanas de desarrollo (Fase final de producción)</p></div></section>
-<footer id="contacto"><div class="footer-grid"><div><h3>Ecos del Abismo</h3><p style="color:var(--muted);line-height:1.6">Un proyecto enfocado en la excelencia visual y narrativa dentro del mundo de la animación digital tridimensional.</p></div><div><h3>Contacto Directo</h3><form class="contact-form" onsubmit="event.preventDefault();alert('¡Mensaje enviado con éxito!');"><input type="text" placeholder="Tu Nombre" required><input type="email" placeholder="Tu Correo" required><textarea rows="3" placeholder="Tu Mensaje" required></textarea><button class="btn btn-primary" style="width:100%;border:0;cursor:pointer">Enviar mensaje</button></form></div><div><h3>Enlaces y Recursos</h3><div class="social-links"><a href="#">Discord</a><a href="https://github.com/lchicaa04-hue/pagina-web">GitHub</a><a href="https://notion.so">Notion</a><a href="https://youtube.com">YouTube</a></div><div style="margin-top:25px"><a href="#" download class="btn btn-secondary" style="font-size:.85rem;padding:8px 15px">Descargar Manual PDF (4 Págs)</a></div></div></div><div class="footer-bottom"><p>Proyecto desarrollado para el Tecnólogo en Animación 3D del SENA (Ficha 3410924). Instructor: Roilan Galleano.</p><p>&copy; 2026 Ecos del Abismo. Todos los derechos reservados.</p></div></footer>
-</body></html>
+    <div class="institutional-bar">
+        <span>SENA — Tecnólogo en Animación 3D</span>
+        <span>Ficha: 3410924</span>
+    </div>
+
+    <header class="hero" id="inicio">
+        <h1>Ecos del Abismo</h1>
+        <p>Portafolio oficial y documentación del proyecto formativo de animación digital y entornos 3D.</p>
+        <div class="cta-buttons">
+            <a href="#concepto" class="btn btn-primary">Ver Proyecto</a>
+            <a href="#contacto" class="btn btn-secondary">Contacto Institucional</a>
+        </div>
+    </header>
+
+    <section id="concepto">
+        <h2 class="section-title">Sobre el Proyecto</h2>
+        <p class="synopsis-text">En un mundo donde la luz solar no alcanza, un buceador solitario desciende a las profundidades oceánicas para recuperar los fragmentos de una civilización olvidada, enfrentándose no solo a la inmensidad del abismo, sino a los ecos de su propio pasado.</p>
+        <div class="grid-4">
+            <div class="card"><h3>Género</h3><p>Cortometraje de Animación 3D, Drama & Misterio Submarino.</p></div>
+            <div class="card"><h3>Motor & Tech</h3><p>Blender 5.0 + Unreal Engine 5 (Lumen + Nanite para entornos abisales).</p></div>
+            <div class="card"><h3>Narrativa</h3><p>Atmósferas inmersivas, diseño sonoro profundo y storytelling visual sin diálogos.</p></div>
+            <div class="card"><h3>Estilo Visual</h3><p>Realismo estilizado, paleta de tonos azulados oscuros con destellos bioluminiscentes.</p></div>
+        </div>
+    </section>
+
+    <section id="proceso" style="background-color: #FFFFFF;">
+        <h2 class="section-title">Proceso Creativo (Pipeline)</h2>
+        <div class="timeline">
+            <div class="timeline-item"><h4>ETAPA 1: Preproducción & Concept Art</h4><p>Definición del universo visual, investigación de bioluminiscencia marina y storyboards detallados.</p></div>
+            <div class="timeline-item"><h4>ETAPA 2: Modelado 3D & Esculpido</h4><p>Creación de la escenografía submarina, el protagonista, criaturas abisales y props complejos.</p></div>
+            <div class="timeline-item"><h4>ETAPA 3: Texturizado PBR & Shading</h4><p>Materiales hiperrealistas en Substance Painter optimizados para motores en tiempo real.</p></div>
+            <div class="timeline-item"><h4>ETAPA 4: Rigging & Animación</h4><p>Esquemas de animación corporal avanzada y simulación de elementos fluidos bajo el agua.</p></div>
+            <div class="timeline-item"><h4>ETAPA 5: Render & Postproducción</h4><p>Iluminación volumétrica, gradación de color final y masterización de sonido envolvente.</p></div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2 class="section-title">Galería Académica</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><div class="gallery-placeholder">Turntable 3D</div><div class="gallery-info"><h4>Protagonista</h4><p>Modelo de personaje principal y traje de buceo de alta tecnología.</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">Criaturas Abisales</div><div class="gallery-info"><h4>Fauna Bioluminiscente</h4><p>Diseño conceptual y modelado de vida marina ficticia del abismo.</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">Escenario Principal</div><div class="gallery-info"><h4>Las Ruinas Sumergidas</h4><p>Tomas de iluminación y texturizado de los templos submarinos.</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">UI / Storyboard</div><div class="gallery-info"><h4>Planificación de Planos</h4><p>Bocetos clave de la secuencia de descenso y descubrimiento.</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">Concept Art</div><div class="gallery-info"><h4>Paleta de Colores</h4><p>Pruebas de atmósfera visual y contraste entre azul profundo y amarillo estelar.</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">Composición Final</div><div class="gallery-info"><h4>Capturas de Render</h4><p>Fotogramas destacados extraídos directamente del cortometraje.</p></div></div>
+        </div>
+    </section>
+
+    <section id="equipo" style="background-color: #FFFFFF;">
+        <h2 class="section-title">Equipo de Trabajo</h2>
+        <div class="team-grid">
+            <div class="team-card"><h4>Laura Isabel Vargas Chaves</h4><p>Animación & Integración</p></div>
+            <div class="team-card"><h4>Doriam H.</h4><p>Dirección</p></div>
+            <div class="team-card"><h4>Enelia M.</h4><p>Modelado 3D</p></div>
+            <div class="team-card"><h4>Juliana C.</h4><p>Artista de Materiales</p></div>
+            <div class="team-card"><h4>Katherin R.</h4><p>Control de Calidad (QA)</p></div>
+            <div class="team-card"><h4>Miguel G.</h4><p>Documentación</p></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="support-section">
+            <h2 class="section-title" style="margin-bottom: 20px;">Estado del Proyecto</h2>
+            <p>Seguimiento continuo del proceso formativo en el desarrollo de Ecos del Abismo, cumpliendo con los estándares de calidad del programa SENA.</p>
+            <div class="cta-buttons" style="justify-content: center; margin-bottom: 20px;">
+                <a href="https://notion.so" target="_blank" rel="noreferrer" class="btn btn-primary">Ver Bitácora en Notion</a>
+                <a href="https://discord.gg" target="_blank" rel="noreferrer" class="btn btn-secondary" style="border-color: var(--primary-blue); color: var(--primary-blue);">Canal de Equipo</a>
+            </div>
+            <div class="progress-bar-container"><div class="progress-fill"></div></div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 12px; font-weight: 600;">Cronograma actual: 17 semanas de desarrollo (Fase final de producción)</p>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div><h3>Ecos del Abismo</h3><p style="color: #CBD5E0; font-size: 0.95rem; line-height: 1.6;">Proyecto formativo institucional enfocado en la excelencia técnica y narrativa de la animación tridimensional.</p></div>
+            <div><h3>Formulario de Contacto</h3><form class="contact-form" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!');"><input type="text" placeholder="Tu Nombre" required><input type="email" placeholder="Tu Correo Institucional" required><textarea rows="3" placeholder="Tu Mensaje" required></textarea><button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer; color: var(--primary-blue);">Enviar mensaje</button></form></div>
+            <div><h3>Enlaces y Recursos</h3><div class="social-links"><a href="https://discord.gg" target="_blank" rel="noreferrer">Discord</a><a href="https://github.com/lchicaa04-hue/pagina-web" target="_blank" rel="noreferrer">GitHub</a><a href="https://notion.so" target="_blank" rel="noreferrer">Notion</a><a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a></div><div style="margin-top: 25px;"><a href="#" download class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 15px; display: inline-block;">Descargar Manual PDF (4 Págs)</a></div></div>
+        </div>
+        <div class="footer-bottom"><p>Proyecto desarrollado para el Tecnólogo en Animación 3D del SENA (Ficha 3410924). Instructor: Roilan Galleano.</p><p>&copy; 2026 Ecos del Abismo. Todos los derechos reservados.</p></div>
+    </footer>
+</body>
+</html>
